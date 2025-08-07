@@ -74,37 +74,38 @@ document.addEventListener('DOMContentLoaded', function() {
     const stickyContainer = document.querySelector('.painpoint-sticky-container');
     const painpointTexts = document.querySelectorAll('.painpoint-text');
     const numPainpoints = painpointTexts.length;
+    const totalStates = numPainpoints + 1;
 
     if (painpointSection && stickyContainer && painpointTexts.length > 0) {
         
-        painpointTexts[0].classList.add('active');
-        stickyContainer.classList.add('state-1');
+          painpointTexts[0].classList.add('active');
+          stickyContainer.classList.add('state-1');
 
         window.addEventListener('scroll', () => {
             const rect = painpointSection.getBoundingClientRect();
             
             if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
                 const scrollProgress = -rect.top / (painpointSection.scrollHeight - window.innerHeight);
-                let currentIndex = Math.floor(scrollProgress * numPainpoints);
-                currentIndex = Math.min(numPainpoints - 1, currentIndex);
+                  let currentIndex = Math.floor(scrollProgress * totalStates);
+                  currentIndex = Math.min(totalStates - 1, currentIndex);
 
-                painpointTexts.forEach((text, index) => {
-                    if (index === currentIndex) {
-                        text.classList.add('active');
-                    } else {
-                        text.classList.remove('active');
-                    }
-                });
+                  painpointTexts.forEach((text, index) => {
+                      if (index === currentIndex && currentIndex < numPainpoints) {
+                          text.classList.add('active');
+                      } else {
+                          text.classList.remove('active');
+                      }
+                  });
 
-                const currentStateClass = 'state-' + (currentIndex + 1);
-                for (let i = 1; i <= numPainpoints; i++) {
-                    stickyContainer.classList.remove('state-' + i);
-                }
-                stickyContainer.classList.add(currentStateClass);
+                  const currentStateClass = 'state-' + (currentIndex + 1);
+                  for (let i = 1; i <= totalStates; i++) {
+                      stickyContainer.classList.remove('state-' + i);
+                  }
+                  stickyContainer.classList.add(currentStateClass);
             }
         });
     }
-    // --- ENDE: Painpoint Parallax Scroll-Logik ---
+      // --- ENDE: Painpoint Parallax Scroll-Logik ---
 
     const burgerButton = document.getElementById('burger-menu-button');
     const closeButton = document.getElementById('close-menu-button');
