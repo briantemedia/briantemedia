@@ -1,0 +1,298 @@
+/* Benutzerdefinierte Stile & Schriftdefinitionen */
+:root {
+    --accent-color: #FF5722;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #1A1A1A;
+    font-family: 'Poppins', sans-serif;
+    color: #F3F4F6; /* Helles Grau */
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    font-weight: 300; /* Globale dünnere Schriftstärke */
+}
+
+.font-serif-accent {
+    font-family: 'Playfair Display', serif; /* Geschwungenere Serifenschrift */
+}
+
+/* Glassmorphism Navigationsblock */
+.glass-nav-menu {
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+}
+
+/* Navigationslink Hover- & Fokus-Effekt */
+.nav-link {
+    transition: color 0.3s ease;
+    border-radius: 9999px;
+}
+.nav-link:hover {
+    color: var(--accent-color);
+}
+.nav-link:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* --- ANIMATIONEN --- */
+@keyframes animate-line-width {
+    0% { width: 0%; }
+    100% { width: 6rem; }
+}
+.line-animated {
+    animation: animate-line-width 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.5s both;
+}
+
+@keyframes blur-in {
+  0% { filter: blur(10px); opacity: 0; }
+  100% { filter: blur(0px); opacity: 1; }
+}
+.blur-in-effect {
+  animation: blur-in 1s ease-out both;
+}
+
+#changing-icon {
+    transition: opacity 0.4s ease-in-out;
+}
+
+
+/* Animation für den dynamischen Textwechsel der Headline */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Eigene Klasse für das hervorgehobene Wort in der Headline */
+.headline-accent-word {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.9em;
+    letter-spacing: 1px;
+    vertical-align: middle; 
+}
+
+#dynamic-headline.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* --- Header Scroll-Verhalten --- */
+#main-header {
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+#main-header.header-hidden {
+    transform: translateY(-120%);
+}
+
+#main-header.header-scrolled {
+    background-color: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#main-header.header-scrolled nav {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+#main-header.header-scrolled .glass-nav-menu {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+/* --- START: NEUER, FUNKTIONIERENDER MARQUEE-CODE --- */
+.marquee-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(50%);
+    z-index: 10;
+}
+
+.marquee-scroll {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    background-color: var(--accent-color);
+    color: #1A1A1A;
+    transform: rotate(-1deg);
+    padding: 0.75rem 0;
+}
+
+.marquee-scroll div {
+    white-space: nowrap;
+    animation: marquee-animation var(--t) linear infinite;
+}
+
+@keyframes marquee-animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.marquee-scroll div span {
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 1.5rem;
+}
+
+.marquee-scroll div .separator {
+    font-size: 1.25rem;
+    color: #1A1A1A;
+}
+/* --- ENDE: NEUER, FUNKTIONIERENDER MARQUEE-CODE --- */
+
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* --- Neuer Leistungsbereich --- */
+.service-grid-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2rem;
+}
+.service-grid-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.service-grid-card.highlight {
+    background-color: var(--accent-color);
+    color: #1A1A1A;
+}
+.service-grid-card.highlight h3, .service-grid-card.highlight p {
+    color: #1A1A1A;
+}
+.service-grid-card.highlight .arrow-circle {
+    background-color: #1A1A1A;
+    color: var(--accent-color);
+}
+
+.hero-background {
+    background: radial-gradient(ellipse at bottom, #1a202c 0%, #1A1A1A 70%);
+}
+
+/* --- Neuer Über-uns-Bereich --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.about-image-wrapper {
+    position: relative;
+}
+.about-image-outline {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 4px solid var(--accent-color);
+    border-radius: 9999px;
+    z-index: 1;
+}
+.progress-bar-bg {
+    background-color: #4b5563;
+}
+
+/* --- Branchen-Banner-Bereich --- */
+.industry-banner {
+    background: #2D2D2D;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.industry-banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+.industry-banner .arrow-circle {
+     transition: transform 0.3s ease;
+}
+.industry-banner:hover .arrow-circle {
+    transform: rotate(-45deg);
+}
+
+/* --- Mobile Navigation --- */
+#mobile-menu {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* --- START: Painpoint Parallax Bereich --- */
+#painpoint-parallax {
+    position: relative;
+    height: 400vh;
+}
+.painpoint-sticky-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #FF5722;
+    transition: background-color 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.painpoint-sticky-container.state-2 {
+    background-color: #1a202c;
+}
+.painpoint-sticky-container.state-3 {
+    background-color: #f59e0b;
+}
+.painpoint-sticky-container.state-4 {
+    background-color: #3b82f6;
+}
+.painpoint-text-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.painpoint-text {
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.painpoint-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* --- ENDE: Painpoint Parallax Bereich --- */
