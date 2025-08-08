@@ -58,9 +58,9 @@ body{background:var(--bg);color:#F3F4F6;font-family:'Poppins',sans-serif;font-we
 .link:hover{ color:#fff; text-decoration:underline; }
 
 /* Buttons */
-.btn-primary{ display:inline-block; padding:0.9rem 1.25rem; border-radius:0.75rem; background:linear-gradient(135deg, #FF6A2A, #FF5722 60%, #D54A1D); color:#fff; font-weight:700; box-shadow:0 10px 30px rgba(255,87,34,.25); transition:.2s; }
+.btn-primary{ display:inline-flex; align-items:center; justify-content:center; padding:0.9rem 1.25rem; border-radius:0.75rem; background:linear-gradient(135deg, #FF6A2A, #FF5722 60%, #D54A1D); color:#fff; font-weight:700; text-decoration:none; box-shadow:0 10px 30px rgba(255,87,34,.25); transition:.2s; }
 .btn-primary:hover{ transform:translateY(-2px); }
-.btn-secondary{ display:inline-block; padding:0.9rem 1.25rem; border-radius:0.75rem; background:#333; border:1px solid #444; color:#ddd; font-weight:600; transition:.2s; }
+.btn-secondary{ display:inline-flex; align-items:center; justify-content:center; padding:0.9rem 1.25rem; border-radius:0.75rem; background:#333; border:1px solid #444; color:#ddd; font-weight:600; text-decoration:none; transition:.2s; }
 .btn-secondary:hover{ border-color:#777; color:#fff; }
 .btn-outline{ display:inline-block; padding:.8rem 1.1rem; border-radius:.75rem; border:1px solid #3b3b3b; color:#eaeaea; }
 .btn-floating{ position:absolute; right:1rem; top:1rem; background:#0f0f0f; border:1px solid #2a2a2a; color:#eaeaea; padding:.6rem 1rem; border-radius:999px; box-shadow:0 10px 20px rgba(0,0,0,.25); }
@@ -151,3 +151,9 @@ footer .chip-dark{ padding:.5rem .9rem; }
 #cursor{ position:fixed; left:0; top:0; width:24px; height:24px; border-radius:9999px; border:2px solid rgba(255,255,255,.7); pointer-events:none; z-index:10000; transform:translate(-50%,-50%) scale(1); transition: transform .15s ease, background-color .15s ease, border-color .15s ease; mix-blend-mode:difference; }
 .cursor-active{ transform:translate(-50%,-50%) scale(1.6); border-color:var(--accent-blue); background-color:rgba(13,59,102,.22); }
 @media (hover:none){ #cursor{ display:none; } }
+/* ===== GaLaBau Specific ===== */
+.nav-link.active{ color:var(--accent-color); }
+.gallery img{ border-radius:16px; }
+.lightbox{ position:fixed; inset:0; background:rgba(0,0,0,.8); display:flex; align-items:center; justify-content:center; transition:opacity .3s ease; z-index:9999; }
+.lightbox.hidden{ display:none; }
+.lightbox img{ max-width:90%; max-height:90%; border-radius:12px; }
