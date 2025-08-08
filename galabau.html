@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GaLaBau | b.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="antialiased">
+  <!-- Cursor + Noise -->
+  <div id="cursor"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50">
+    <nav class="container mx-auto px-4 max-w-7xl flex items-center justify-center relative transition-all duration-300 py-6">
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="index.html" class="text-white text-3xl font-bold accent-blue-dot shiny-text">b.</a>
+        <div class="glass-nav-menu px-3 py-2">
+          <ul class="flex items-center space-x-2">
+            <li><a href="index.html#about" class="nav-link px-5 py-3 magnet">Über mich</a></li>
+            <li><a href="index.html#services" class="nav-link px-5 py-3 magnet">Leistungen</a></li>
+            <li><a href="index.html#blog" class="nav-link px-5 py-3 magnet">Blog</a></li>
+            <li><a href="index.html#contact" class="nav-link px-5 py-3 magnet">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="index.html#tiefbau" class="nav-link text-sm font-semibold text-gray-300 hover:text-white transition-colors flex items-center gap-2 magnet">🏗️ Tiefbau</a>
+          <a href="galabau.html" class="nav-link text-sm font-semibold active transition-colors flex items-center gap-2 magnet">🌿 GaLaBau</a>
+        </div>
+      </div>
+      <div class="lg:hidden absolute right-4">
+        <button id="burger-menu-button" aria-label="Menü öffnen" class="text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="relative galabau-hero overflow-hidden">
+    <img src="https://source.unsplash.com/1600x900/?landscape,garden" alt="GaLaBau" class="w-full h-[70vh] object-cover" loading="lazy"/>
+    <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+      <div class="text-center px-4 reveal">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 shiny-text">Grün gestalten</h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8">Digitale Projekte für Garten- und Landschaftsbau.</p>
+        <a href="#contact" class="btn-primary magnet">Projekt starten</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ===== -->
+  <section class="with-divider py-20 px-4 bg-gray-100">
+    <div class="container mx-auto max-w-6xl">
+      <div class="mb-12 text-center reveal">
+        <span class="section-tag">VORTEILE</span>
+        <h2 class="section-title text-black shiny-text">Warum GaLaBau digital?</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="benefit-card reveal">
+          <div class="text-4xl mb-4">🌿</div>
+          <h3 class="font-bold mb-2">Mehr Sichtbarkeit</h3>
+          <p>Gefunden werden, bevor der Wettbewerb es wird.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="text-4xl mb-4">🤝</div>
+          <h3 class="font-bold mb-2">Vertrauen schaffen</h3>
+          <p>Referenzen & Abläufe transparent präsentieren.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="font-bold mb-2">Schnelle Anfragen</h3>
+          <p>Klare CTAs und optimierte Formulare.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="with-divider py-20 px-4 bg-ultra">
+    <div class="container mx-auto max-w-6xl">
+      <div class="mb-12 text-center reveal">
+        <span class="section-tag">PROJEKTE</span>
+        <h2 class="section-title text-black shiny-text">GaLaBau Galerie</h2>
+      </div>
+      <div class="gallery-grid">
+        <img src="https://source.unsplash.com/600x400/?garden,path" alt="Projekt" data-lightbox class="reveal" loading="lazy"/>
+        <img src="https://source.unsplash.com/600x400/?garden,design" alt="Projekt" data-lightbox class="reveal" loading="lazy"/>
+        <img src="https://source.unsplash.com/600x400/?landscape,stone" alt="Projekt" data-lightbox class="reveal" loading="lazy"/>
+        <img src="https://source.unsplash.com/600x400/?garden,architecture" alt="Projekt" data-lightbox class="reveal" loading="lazy"/>
+        <img src="https://source.unsplash.com/600x400/?landscape,plants" alt="Projekt" data-lightbox class="reveal" loading="lazy"/>
+        <img src="https://source.unsplash.com/600x400/?garden,pond" alt="Projekt" data-lightbox class="reveal" loading="lazy"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="with-divider py-20 px-4 bg-gray-100">
+    <div class="container mx-auto max-w-6xl">
+      <div class="mb-12 text-center reveal">
+        <span class="section-tag">SO ARBEITEN WIR</span>
+        <h2 class="section-title text-black shiny-text">Vom Entwurf zur Umsetzung</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="benefit-card reveal">
+          <div class="text-4xl mb-4">📝</div>
+          <h3 class="font-bold mb-2">Planung</h3>
+          <p>Wir analysieren Gelände & Anforderungen.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="text-4xl mb-4">🚜</div>
+          <h3 class="font-bold mb-2">Umsetzung</h3>
+          <p>Maschinen & Team schaffen nachhaltige Flächen.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="text-4xl mb-4">🌱</div>
+          <h3 class="font-bold mb-2">Pflege</h3>
+          <p>Begleitung und Optimierung nach Projektabschluss.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIAL ===== -->
+  <section class="with-divider py-20 px-4 bg-surface">
+    <div class="container mx-auto max-w-3xl">
+      <div class="testimonial-wrap reveal text-center">
+        <blockquote class="testimonial-quote">„Mit der neuen Seite gewinnen wir regelmäßig Gartenprojekte – und die Kunden lieben die klare Darstellung.“</blockquote>
+        <div class="testimonial-meta justify-center">
+          <img class="avatar" src="https://source.unsplash.com/64x64/?portrait,woman" alt="Kunde" />
+          <div>
+            <div class="text-white font-semibold">Sabrina L., GaLaBau</div>
+            <div class="text-gray-400 text-sm">Geschäftsführerin</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section id="contact" class="with-divider py-20 px-4 bg-ultra">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h2 class="section-title mb-4 shiny-text">Bereit für Ihr nächstes Gartenprojekt?</h2>
+      <p class="text-gray-700 mb-8">Ich helfe Ihnen, es digital sichtbar zu machen.</p>
+      <a href="index.html#contact" class="btn-primary magnet">Kontakt aufnehmen</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="with-divider py-10 px-4 border-t border-white/10">
+    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-gray-400 text-sm">© <span id="year"></span> Briant Media – Web & KI</div>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="#" class="link">Impressum</a>
+        <a href="#" class="link">Datenschutz</a>
+        <a href="index.html#contact" class="chip-dark magnet">Projekt starten</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden opacity-0 z-50">
+    <div class="absolute top-0 right-0 w-80 h-full bg-[#151515] shadow-2xl p-6 flex flex-col gap-4">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="text-white text-2xl font-bold">b.</a>
+        <button id="close-menu-button" aria-label="Menü schließen" class="text-white text-xl leading-none">×</button>
+      </div>
+      <a class="mobile-nav-link" href="index.html#about">Über mich</a>
+      <a class="mobile-nav-link" href="index.html#services">Leistungen</a>
+      <a class="mobile-nav-link" href="index.html#blog">Blog</a>
+      <a class="mobile-nav-link" href="index.html#contact">Kontakt</a>
+      <div class="mt-auto"><a href="index.html#contact" class="btn-primary w-full text-center magnet">Projekt starten</a></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

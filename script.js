@@ -90,4 +90,21 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('mousemove', onMove);
     el.addEventListener('mouseleave', reset);
   });
+
+  // ===== Lightbox =====
+  const lbItems = document.querySelectorAll('[data-lightbox]');
+  if (lbItems.length) {
+    const lb = document.createElement('div');
+    lb.className = 'lightbox';
+    lb.innerHTML = '<img src="" alt="Lightbox">';
+    document.body.appendChild(lb);
+    const lbImg = lb.querySelector('img');
+    lbItems.forEach(img=>{
+      img.addEventListener('click',()=>{
+        lbImg.src = img.src;
+        lb.classList.add('open');
+      });
+    });
+    lb.addEventListener('click',()=> lb.classList.remove('open'));
+  }
 });
