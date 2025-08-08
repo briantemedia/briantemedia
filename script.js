@@ -90,4 +90,18 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('mousemove', onMove);
     el.addEventListener('mouseleave', reset);
   });
+
+  // ===== Lightbox =====
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
+  const galleryImgs = document.querySelectorAll('.gallery-grid img');
+  galleryImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      if (lightboxImg && lightbox) {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('show');
+      }
+    });
+  });
+  lightbox && lightbox.addEventListener('click', () => lightbox.classList.remove('show'));
 });
