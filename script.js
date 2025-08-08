@@ -90,4 +90,25 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('mousemove', onMove);
     el.addEventListener('mouseleave', reset);
   });
+
+  // Fade-in animations
+  const fadeElements = document.querySelectorAll('.fade-in');
+  const ioFade = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); ioFade.unobserve(e.target); } });
+  },{ threshold:0.2 });
+  fadeElements.forEach(el=> ioFade.observe(el));
+
+  // Lightbox for galleries
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  const lbImg = document.createElement('img');
+  lightbox.appendChild(lbImg);
+  document.body.appendChild(lightbox);
+  document.querySelectorAll('.gallery-grid img').forEach(img=>{
+    img.addEventListener('click',()=>{
+      lbImg.src = img.src;
+      lightbox.classList.add('open');
+    });
+  });
+  lightbox.addEventListener('click', ()=> lightbox.classList.remove('open'));
 });
