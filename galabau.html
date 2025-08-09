@@ -3,30 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GaLaBau | b.</title>
+  <title>GaLaBau-Websites, die begeistern | BrianteMedia</title>
+  <meta name="description" content="Vorher-Nachher-Effekte, starke Bilder, planbarer Prozess. So werden aus Anfragen Wunschprojekte." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only">Zum Inhalt springen</a>
   <div id="cursor"></div>
   <div class="noise-overlay" aria-hidden="true"></div>
-
   <header id="main-header" class="fixed top-0 left-0 right-0 z-50">
     <nav class="container mx-auto px-4 max-w-7xl flex items-center justify-center relative transition-all duration-300 py-6">
       <div class="hidden lg:flex items-center gap-8">
         <a href="index.html" class="text-white text-3xl font-bold accent-blue-dot shiny-text">b.</a>
         <div class="glass-nav-menu px-3 py-2">
           <ul class="flex items-center space-x-2">
-            <li><a href="index.html#about" class="nav-link px-5 py-3 magnet">Über mich</a></li>
-            <li><a href="index.html#services" class="nav-link px-5 py-3 magnet">Leistungen</a></li>
-            <li><a href="index.html#blog" class="nav-link px-5 py-3 magnet">Blog</a></li>
-            <li><a href="index.html#contact" class="nav-link px-5 py-3 magnet">Kontakt</a></li>
+            <li><a href="ueber-mich.html" class="nav-link px-5 py-3 magnet">Über mich</a></li>
+            <li><a href="leistungen.html" class="nav-link px-5 py-3 magnet">Leistungen</a></li>
+            <li><a href="blog.html" class="nav-link px-5 py-3 magnet">Blog</a></li>
+            <li><a href="kontakt.html" class="nav-link px-5 py-3 magnet">Kontakt</a></li>
           </ul>
         </div>
         <div class="flex items-center space-x-6">
-          <a href="#" class="nav-link text-sm font-semibold text-gray-300 hover:text-white transition-colors flex items-center gap-2 magnet">🏗️ Tiefbau</a>
-          <a href="galabau.html" class="nav-link text-sm font-semibold flex items-center gap-2 magnet active">🌿 GaLaBau</a>
+          <a href="tiefbau.html" class="nav-link text-sm font-semibold text-gray-300 hover:text-white transition-colors flex items-center gap-2 magnet">🏗️ Tiefbau</a>
+          <a href="galabau.html" class="nav-link text-sm font-semibold flex items-center gap-2 magnet active" aria-current="page">🌿 GaLaBau</a>
         </div>
       </div>
       <div class="lg:hidden absolute right-4">
@@ -36,129 +37,101 @@
       </div>
     </nav>
   </header>
-
-  <section class="relative h-screen galabau-hero">
-    <img src="https://source.unsplash.com/1600x900/?landscape,gardening" alt="GaLaBau" class="w-full h-full object-cover"/>
-    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 shiny-text">GaLaBau, das wirkt.</h1>
-      <a href="#kontakt" class="btn-primary magnet">Projekt starten</a>
-    </div>
-  </section>
-
-  <section class="py-20 px-4 bg-gray-100 with-divider">
-    <div class="container mx-auto max-w-6xl">
-      <div class="text-center mb-12 reveal">
-        <span class="section-tag">Vorteile</span>
-        <h2 class="section-title text-black shiny-text">Warum mit uns?</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-6 bg-white rounded-2xl text-center shadow reveal">
-          <div class="text-4xl mb-3">⚡</div>
-          <h3 class="font-semibold mb-2">Schnell umgesetzt</h3>
-          <p class="text-gray-600">Wir liefern in Rekordzeit, ohne Qualität einzubüßen.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl text-center shadow reveal">
-          <div class="text-4xl mb-3">🌱</div>
-          <h3 class="font-semibold mb-2">Nachhaltig gedacht</h3>
-          <p class="text-gray-600">Ressourcenschonend von Anfang an geplant.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl text-center shadow reveal">
-          <div class="text-4xl mb-3">🤝</div>
-          <h3 class="font-semibold mb-2">Partnerschaftlich</h3>
-          <p class="text-gray-600">Direkte Kommunikation ohne Fachchinesisch.</p>
+  <main id="main" class="pt-24">
+    <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image:url('https://source.unsplash.com/1600x900/?garden,luxury');">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 shiny-text">Ihr Traumgarten beginnt online.</h1>
+        <p class="text-xl mb-8">Wir inszenieren Ihr Können – damit Premium-Anfragen entstehen.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#portfolio" class="btn-secondary magnet">Portfolio ansehen</a>
+          <a href="kontakt.html" class="btn-primary magnet">Beratung anfragen</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="py-20 px-4 bg-ultra with-divider">
-    <div class="container mx-auto max-w-6xl text-center">
-      <span class="section-tag">Projekte</span>
-      <h2 class="section-title text-black shiny-text mb-12">Galerie</h2>
-      <div class="gallery grid grid-cols-2 md:grid-cols-3 gap-4">
-        <a href="https://source.unsplash.com/1200x900/?garden,design" class="gallery-item"><img src="https://source.unsplash.com/600x600/?garden,design" alt="Projekt 1" class="w-full h-full object-cover" loading="lazy"/></a>
-        <a href="https://source.unsplash.com/1200x900/?landscape,stone" class="gallery-item"><img src="https://source.unsplash.com/600x600/?landscape,stone" alt="Projekt 2" class="w-full h-full object-cover" loading="lazy"/></a>
-        <a href="https://source.unsplash.com/1200x900/?lawn" class="gallery-item"><img src="https://source.unsplash.com/600x600/?lawn" alt="Projekt 3" class="w-full h-full object-cover" loading="lazy"/></a>
-        <a href="https://source.unsplash.com/1200x900/?garden,path" class="gallery-item"><img src="https://source.unsplash.com/600x600/?garden,path" alt="Projekt 4" class="w-full h-full object-cover" loading="lazy"/></a>
-        <a href="https://source.unsplash.com/1200x900/?pond,garden" class="gallery-item"><img src="https://source.unsplash.com/600x600/?pond,garden" alt="Projekt 5" class="w-full h-full object-cover" loading="lazy"/></a>
-        <a href="https://source.unsplash.com/1200x900/?flower,bed" class="gallery-item"><img src="https://source.unsplash.com/600x600/?flower,bed" alt="Projekt 6" class="w-full h-full object-cover" loading="lazy"/></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20 px-4 bg-surface with-divider">
-    <div class="container mx-auto max-w-4xl">
-      <div class="text-center mb-12 reveal">
-        <span class="section-tag">So arbeiten wir</span>
-        <h2 class="section-title shiny-text">In 3 Schritten zum Garten</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="step-card--inset reveal">
-          <div class="step-index">1</div>
-          <p class="text-gray-300">Kostenloses Erstgespräch & Zieldefinition.</p>
-        </div>
-        <div class="step-card--inset reveal">
-          <div class="step-index">2</div>
-          <p class="text-gray-300">Konzept & Visualisierung Ihres Gartens.</p>
-        </div>
-        <div class="step-card--inset reveal">
-          <div class="step-index">3</div>
-          <p class="text-gray-300">Umsetzung & langfristige Pflege.</p>
+    </section>
+    <section id="vorhernachher" class="py-20 px-4 bg-gray-100 with-divider">
+      <div class="container mx-auto max-w-6xl text-center">
+        <h2 class="section-title mb-8 shiny-text">Vorher-Nachher</h2>
+        <p class="mb-12">Transformation sichtbar machen – Side-by-Side zeigt Qualität sofort.</p>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-4 shadow">
+            <img src="https://source.unsplash.com/600x400/?garden,before" alt="Vorher" loading="lazy" class="mb-2 w-full h-40 object-cover"/>
+            <img src="https://source.unsplash.com/600x400/?garden,after" alt="Nachher" loading="lazy" class="w-full h-40 object-cover"/>
+          </div>
+          <div class="bg-white rounded-xl p-4 shadow">
+            <img src="https://source.unsplash.com/600x400/?yard,before" alt="Vorher" loading="lazy" class="mb-2 w-full h-40 object-cover"/>
+            <img src="https://source.unsplash.com/600x400/?yard,after" alt="Nachher" loading="lazy" class="w-full h-40 object-cover"/>
+          </div>
+          <div class="bg-white rounded-xl p-4 shadow">
+            <img src="https://source.unsplash.com/600x400/?landscape,before" alt="Vorher" loading="lazy" class="mb-2 w-full h-40 object-cover"/>
+            <img src="https://source.unsplash.com/600x400/?landscape,after" alt="Nachher" loading="lazy" class="w-full h-40 object-cover"/>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="py-20 px-4 bg-gray-100 with-divider">
-    <div class="container mx-auto max-w-3xl text-center reveal">
-      <blockquote class="testimonial-quote text-gray-900">„Unser Garten ist jetzt unser Lieblingsort – professionell geplant und perfekt umgesetzt.“</blockquote>
-      <div class="testimonial-meta justify-center">
-        <img class="avatar" src="https://source.unsplash.com/64x64/?portrait,woman" alt="Kunde" />
-        <div>
-          <div class="font-semibold text-gray-900">Sarah L., Privatkundin</div>
-          <div class="text-gray-600 text-sm">GaLaBau Projekt</div>
+    </section>
+    <section id="portfolio" class="py-20 px-4 bg-surface with-divider">
+      <div class="container mx-auto max-w-6xl text-center">
+        <h2 class="section-title mb-8 shiny-text">Projekte nach Typ</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white rounded-2xl shadow">Pool &amp; Wasser</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Terrassen &amp; Wege</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Pflanzkonzepte</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Beleuchtung</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Pflege &amp; Service</div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="kontakt" class="py-20 px-4 bg-ultra with-divider">
-    <div class="container mx-auto max-w-4xl text-center">
-      <h2 class="section-title mb-4 shiny-text">Bereit für Ihr nächstes Projekt?</h2>
-      <p class="text-gray-700 mb-8">Lassen Sie uns Ihre Außenanlage auf das nächste Level bringen.</p>
-      <a href="index.html#contact" class="btn-primary magnet">Kontakt aufnehmen</a>
-    </div>
-  </section>
-
+    </section>
+    <section class="py-20 px-4 bg-gray-100 with-divider">
+      <div class="container mx-auto max-w-3xl text-center">
+        <h2 class="section-title mb-8 shiny-text">Stimmen von Kunden</h2>
+        <blockquote class="testimonial-quote text-gray-900">„Vorher-Nachher hat unsere Anfragen verdoppelt – beeindruckend, wie klar alles wirkt.“</blockquote>
+        <div class="testimonial-meta justify-center">
+          <img class="avatar" src="https://source.unsplash.com/64x64/?portrait,man" alt="Kunde" />
+          <div>
+            <div class="font-semibold text-gray-900">Max K., Privatkunde</div>
+            <div class="text-gray-600 text-sm">GaLaBau Projekt</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 px-4 bg-surface with-divider">
+      <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="section-title mb-4 shiny-text">Prozess &amp; Planung</h2>
+        <p class="mb-8">Beratung, Entwurf, Umsetzung – transparent &amp; terminsicher.</p>
+        <a href="kontakt.html" class="btn-primary magnet">Unverbindliche Beratung</a>
+      </div>
+    </section>
+    <section class="py-20 px-4 bg-gray-100 with-divider">
+      <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="section-title mb-4 shiny-text">Abschluss</h2>
+        <p class="mb-8">Lassen Sie uns Ihren Traumgarten digital planen – jetzt Kontakt aufnehmen.</p>
+        <a href="kontakt.html" class="btn-primary magnet">Kontakt aufnehmen</a>
+      </div>
+    </section>
+  </main>
   <footer class="with-divider py-10 px-4 border-t border-white/10">
     <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="text-gray-400 text-sm">© <span id="year"></span> Briant Media – Web & KI</div>
       <div class="flex items-center gap-4 text-sm">
-        <a href="#" class="link">Impressum</a>
-        <a href="#" class="link">Datenschutz</a>
-        <a href="index.html#contact" class="chip-dark magnet">Projekt starten</a>
+        <a href="impressum.html" class="link">Impressum</a>
+        <a href="datenschutz.html" class="link">Datenschutz</a>
+        <a href="kontakt.html" class="chip-dark magnet">Projekt starten</a>
       </div>
     </div>
   </footer>
-
   <div id="mobile-menu" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden opacity-0 z-50">
     <div class="absolute top-0 right-0 w-80 h-full bg-[#151515] shadow-2xl p-6 flex flex-col gap-4">
       <div class="flex items-center justify-between">
         <a href="index.html" class="text-white text-2xl font-bold">b.</a>
         <button id="close-menu-button" aria-label="Menü schließen" class="text-white text-xl leading-none">×</button>
       </div>
-      <a class="mobile-nav-link" href="index.html#about">Über mich</a>
-      <a class="mobile-nav-link" href="index.html#services">Leistungen</a>
-      <a class="mobile-nav-link" href="index.html#blog">Blog</a>
-      <a class="mobile-nav-link" href="index.html#contact">Kontakt</a>
-      <div class="mt-auto"><a href="index.html#contact" class="btn-primary w-full text-center magnet">Projekt starten</a></div>
+      <a class="mobile-nav-link" href="ueber-mich.html">Über mich</a>
+      <a class="mobile-nav-link" href="leistungen.html">Leistungen</a>
+      <a class="mobile-nav-link" href="blog.html">Blog</a>
+      <a class="mobile-nav-link" href="kontakt.html">Kontakt</a>
+      <div class="mt-auto"><a href="kontakt.html" class="btn-primary w-full text-center magnet">Projekt starten</a></div>
     </div>
   </div>
-
-  <div id="lightbox" class="lightbox hidden opacity-0">
-    <img src="" alt="Galerie-Bild"/>
-  </div>
-
   <script src="script.js"></script>
 </body>
 </html>
