@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt – schnelles Erstgespräch | BrianteMedia</title>
+  <meta name="description" content="Schreiben Sie kurz, worum es geht – wir melden uns innerhalb von 24 Stunden." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only">Zum Inhalt springen</a>
+  <div id="cursor"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50">
+    <nav class="container mx-auto px-4 max-w-7xl flex items-center justify-center relative transition-all duration-300 py-6">
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="index.html" class="text-white text-3xl font-bold accent-blue-dot shiny-text">b.</a>
+        <div class="glass-nav-menu px-3 py-2">
+          <ul class="flex items-center space-x-2">
+            <li><a href="ueber-mich.html" class="nav-link px-5 py-3 magnet">Über mich</a></li>
+            <li><a href="leistungen.html" class="nav-link px-5 py-3 magnet">Leistungen</a></li>
+            <li><a href="blog.html" class="nav-link px-5 py-3 magnet">Blog</a></li>
+            <li><a href="kontakt.html" class="nav-link px-5 py-3 magnet active" aria-current="page">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="tiefbau.html" class="nav-link text-sm font-semibold text-gray-300 hover:text-white transition-colors flex items-center gap-2 magnet">🏗️ Tiefbau</a>
+          <a href="galabau.html" class="nav-link text-sm font-semibold text-gray-300 hover:text-white transition-colors flex items-center gap-2 magnet">🌿 GaLaBau</a>
+        </div>
+      </div>
+      <div class="lg:hidden absolute right-4">
+        <button id="burger-menu-button" aria-label="Menü öffnen" class="text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main id="main" class="pt-24">
+    <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image:url('https://source.unsplash.com/1600x900/?construction,contact');">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 shiny-text">Lust, das Fundament zu legen?</h1>
+        <p class="text-xl mb-8">Kurzes Gespräch, klare Roadmap. Ich melde mich innerhalb von 24 h.</p>
+      </div>
+    </section>
+    <section class="py-20 px-4 bg-gray-100 with-divider">
+      <div class="container mx-auto max-w-3xl">
+        <h2 class="section-title mb-4 shiny-text">Schreiben Sie mir kurz</h2>
+        <form data-validate class="grid gap-4" action="#" method="post">
+          <input class="input" type="text" name="name" placeholder="Name*" required />
+          <input class="input" type="email" name="email" placeholder="E-Mail*" required />
+          <input class="input" type="text" name="company" placeholder="Unternehmen (optional)" />
+          <textarea class="input" rows="5" name="message" placeholder="Nachricht" required></textarea>
+          <button type="submit" class="btn-primary magnet">Unverbindlich anfragen</button>
+          <p class="text-sm text-gray-500">Ihre Daten werden nur zur Beantwortung genutzt.</p>
+        </form>
+      </div>
+    </section>
+    <section class="py-20 px-4 bg-surface with-divider">
+      <div class="container mx-auto max-w-3xl">
+        <h2 class="section-title mb-4 shiny-text">Alternativen</h2>
+        <ul class="list-disc list-inside">
+          <li><a href="mailto:info@example.com" class="link">E-Mail</a></li>
+          <li><a href="tel:+49123456789" class="link">Telefon</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="with-divider py-10 px-4 border-t border-white/10">
+    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-gray-400 text-sm">© <span id="year"></span> Briant Media – Web & KI</div>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="impressum.html" class="link">Impressum</a>
+        <a href="datenschutz.html" class="link">Datenschutz</a>
+        <a href="kontakt.html" class="chip-dark magnet">Projekt starten</a>
+      </div>
+    </div>
+  </footer>
+  <div id="mobile-menu" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden opacity-0 z-50">
+    <div class="absolute top-0 right-0 w-80 h-full bg-[#151515] shadow-2xl p-6 flex flex-col gap-4">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="text-white text-2xl font-bold">b.</a>
+        <button id="close-menu-button" aria-label="Menü schließen" class="text-white text-xl leading-none">×</button>
+      </div>
+      <a class="mobile-nav-link" href="ueber-mich.html">Über mich</a>
+      <a class="mobile-nav-link" href="leistungen.html">Leistungen</a>
+      <a class="mobile-nav-link" href="blog.html">Blog</a>
+      <a class="mobile-nav-link" href="kontakt.html">Kontakt</a>
+      <div class="mt-auto"><a href="kontakt.html" class="btn-primary w-full text-center magnet">Projekt starten</a></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
