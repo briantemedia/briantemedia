@@ -3,31 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>b. | Web & KI für Handwerk</title>
+  <title>Websites & SEO für Bau | BrianteMedia – Tiefbau & GaLaBau</title>
+  <meta name="description" content="Klare Websites, die Aufträge & Bewerbungen bringen. Spezialisiert auf Tiefbau & GaLaBau. Kostenlose Erstberatung sichern." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="antialiased">
-  <!-- Cursor + Noise -->
+  <a href="#main" class="sr-only focus:not-sr-only">Zum Inhalt springen</a>
   <div id="cursor"></div>
   <div class="noise-overlay" aria-hidden="true"></div>
-
-  <!-- ===== HEADER ===== -->
   <header id="main-header" class="fixed top-0 left-0 right-0 z-50">
     <nav class="container mx-auto px-4 max-w-7xl flex items-center justify-center relative transition-all duration-300 py-6">
       <div class="hidden lg:flex items-center gap-8">
-        <a href="#" class="text-white text-3xl font-bold accent-blue-dot shiny-text">b.</a>
+        <a href="index.html" class="text-white text-3xl font-bold accent-blue-dot shiny-text">b.</a>
         <div class="glass-nav-menu px-3 py-2">
           <ul class="flex items-center space-x-2">
-            <li><a href="#about" class="nav-link px-5 py-3 magnet">Über mich</a></li>
-            <li><a href="#services" class="nav-link px-5 py-3 magnet">Leistungen</a></li>
-            <li><a href="#blog" class="nav-link px-5 py-3 magnet">Blog</a></li>
-            <li><a href="#contact" class="nav-link px-5 py-3 magnet">Kontakt</a></li>
+            <li><a href="ueber-mich.html" class="nav-link px-5 py-3 magnet">Über mich</a></li>
+            <li><a href="leistungen.html" class="nav-link px-5 py-3 magnet">Leistungen</a></li>
+            <li><a href="blog.html" class="nav-link px-5 py-3 magnet">Blog</a></li>
+            <li><a href="kontakt.html" class="nav-link px-5 py-3 magnet">Kontakt</a></li>
           </ul>
         </div>
         <div class="flex items-center space-x-6">
-          <a href="#tiefbau" class="nav-link text-sm font-semibold text-gray-300 hover:text-white transition-colors flex items-center gap-2 magnet">🏗️ Tiefbau</a>
+          <a href="tiefbau.html" class="nav-link text-sm font-semibold text-gray-300 hover:text-white transition-colors flex items-center gap-2 magnet">🏗️ Tiefbau</a>
           <a href="galabau.html" class="nav-link text-sm font-semibold text-gray-300 hover:text-white transition-colors flex items-center gap-2 magnet">🌿 GaLaBau</a>
         </div>
       </div>
@@ -38,337 +37,159 @@
       </div>
     </nav>
   </header>
-
-  <!-- ===== HERO ===== -->
-  <section class="relative">
-    <div class="relative w-full min-h-screen overflow-hidden hero-background">
-      <div class="blob-outer-container"><div class="blob"></div></div>
-
-      <main class="relative z-10 w-full h-screen flex flex-col items-start justify-center text-left px-6 md:px-16 lg:px-24 xl:px-32">
-        <div class="max-w-4xl reveal">
-          <div class="flex justify-start items-center gap-4 mb-6">
+  <main id="main" class="pt-24">
+    <section class="relative h-screen flex items-center justify-center text-left bg-cover bg-center" style="background-image:url('https://source.unsplash.com/1600x900/?construction,site');">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 px-6 md:px-16">
+        <div class="max-w-3xl">
+          <div class="flex items-center gap-4 mb-6">
             <div id="changing-icon" class="text-orange-500"></div>
-            <div class="w-24 h-1 bg-gradient-to-r from-orange-500/80 to-orange-300/80 rounded-full line-animated"></div>
+            <div class="w-24 h-1 bg-gradient-to-r from-orange-500/80 to-orange-300/80 rounded-full"></div>
           </div>
-          <h1 id="dynamic-headline" class="reveal-title text-3xl md:text-5xl lg:text-6xl font-light text-gray-100 tracking-wide leading-tight transition-all duration-500 min-h-[120px] md:min-h-[150px] lg:min-h-[180px] shiny-text"></h1>
-          <p class="mt-6 max-w-2xl text-lg md:text-xl text-gray-400 leading-relaxed font-light">
-            Ich baue Websites & Automationen für Handwerk – klar, schnell, suchbar.
-          </p>
-          <div class="mt-10 flex flex-col sm:flex-row items-center justify-start gap-4">
-            <a href="#contact" class="btn-primary magnet">Projekt starten</a>
-            <a href="#services" class="btn-secondary magnet">Mehr erfahren</a>
+          <h1 id="dynamic-headline" class="text-3xl md:text-5xl font-light text-gray-100 tracking-wide mb-6 min-h-[120px] shiny-text"></h1>
+          <p class="text-lg md:text-xl text-gray-300 max-w-2xl mb-8">Ich baue Websites & Automationen für Handwerk – klar, schnell, suchbar.</p>
+          <div class="flex flex-col sm:flex-row flex-wrap gap-4 split-cta">
+            <a href="kontakt.html" class="btn-primary magnet">Projekt starten</a>
+            <a href="leistungen.html" class="btn-secondary magnet">Mehr erfahren</a>
+            <a href="tiefbau.html" class="btn-secondary magnet">Zu Tiefbau-Lösungen</a>
+            <a href="galabau.html" class="btn-secondary magnet">Zu GaLaBau-Lösungen</a>
           </div>
         </div>
-      </main>
-    </div>
-
-    <!-- Marquee -->
-    <div class="marquee-wrapper">
-      <div class="marquee-scroll" style="--t:40s">
-        <div><span>Web-Entwicklung</span><span class="separator">+</span><span>KI-Integration</span><span class="separator">+</span><span>Digitale Transformation</span><span class="separator">+</span><span>Tiefbau 4.0</span><span class="separator">+</span><span>Smart GaLaBau</span><span class="separator">+</span></div>
-        <div><span>Web-Entwicklung</span><span class="separator">+</span><span>KI-Integration</span><span class="separator">+</span><span>Digitale Transformation</span><span class="separator">+</span><span>Tiefbau 4.0</span><span class="separator">+</span><span>Smart GaLaBau</span><span class="separator">+</span></div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== SERVICES ===== -->
-  <section id="services" class="with-divider py-20 px-4 bg-gray-100">
-    <div class="container mx-auto max-w-6xl">
-      <div class="flex flex-col md:flex-row justify-between items-center mb-12 reveal">
-        <div>
-          <span class="section-tag">MEINE LEISTUNGEN</span>
-          <h2 class="section-title text-black shiny-text">Nahtlose & intuitive Interaktionen.</h2>
-        </div>
-        <a href="#contact" class="chip-dark magnet">Alle Leistungen</a>
+    </section>
+    <section class="py-20 px-4 bg-gray-100 with-divider">
+      <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="section-title mb-4 shiny-text">Was Sie wirklich wollen: Ergebnisse</h2>
+        <p class="mb-6">Mehr Anfragen, passende Bewerbungen, weniger Leerlauf. Wir richten Ihren Auftritt konsequent auf Wirkung aus – mit schneller Technik, klarer Struktur und Suchmaschinen-Basis, die trägt.</p>
+        <ul class="list-disc list-inside text-left space-y-2 mb-6">
+          <li>Mehr Aufträge gewinnen (sichtbarer &amp; vertrauenswürdiger online)</li>
+          <li>Passende Mitarbeiter finden (Employer-Branding sauber präsentiert)</li>
+          <li>Zeit sparen (klare Prozesse, Automationen)</li>
+        </ul>
+        <a href="kontakt.html" class="btn-primary magnet">Kostenloses Erstgespräch sichern</a>
       </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <article class="service-grid-card basic-gradient neo-pop tilt p-0 reveal">
-          <div class="p-8 flex-grow flex flex-col">
-            <div class="flex justify-between items-start mb-4">
-              <h3 class="card-title">Design</h3>
-              <div class="arrow-circle">➜</div>
+    </section>
+    <section class="py-20 px-4 bg-surface with-divider">
+      <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="section-title mb-4 shiny-text">Leistungen im Überblick</h2>
+        <p class="mb-6">Von Strategie über UX/UI &amp; Development bis SEO &amp; Content – alles aus einer Hand, mit Bau-Branchenfokus.</p>
+        <ul class="list-disc list-inside text-left max-w-md mx-auto space-y-1 mb-6">
+          <li>Webdesign</li>
+          <li>Webentwicklung</li>
+          <li>SEO</li>
+          <li>Content</li>
+          <li>Branding</li>
+          <li>Automation</li>
+        </ul>
+        <a href="leistungen.html" class="btn-secondary magnet">Mehr erfahren</a>
+      </div>
+    </section>
+    <section class="py-20 px-4 bg-gray-100 with-divider">
+      <div class="container mx-auto max-w-6xl text-center">
+        <h2 class="section-title mb-4 shiny-text">Für wen wir bauen</h2>
+        <p class="mb-10">Zwei Wege, ein Ziel: Ergebnisse. Wählen Sie Ihren Pfad.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="tiefbau.html" class="industry-banner flex flex-col md:flex-row items-center magnet">
+            <div class="p-8 md:w-1/2 z-10">
+              <h3 class="text-3xl font-bold text-white font-serif-accent">Tiefbau</h3>
+              <p class="mt-2 text-gray-400">B2B/B2G – harte Fakten, klare Referenzen.</p>
+              <span class="btn-outline mt-4 inline-block">Tiefbau ansehen</span>
             </div>
-            <p class="text-gray-700 flex-grow font-light">Marke & CI – prägnant und wiedererkennbar.</p>
+            <div class="md:w-1/2 h-48 md:h-full relative">
+              <img src="https://source.unsplash.com/800x400/?construction,road" alt="Tiefbau" class="w-full h-full object-cover" loading="lazy" />
+              <div class="industry-gradient"></div>
+              <div class="badge-floating">➜</div>
+            </div>
+          </a>
+          <a href="galabau.html" class="industry-banner flex flex-col md:flex-row items-center magnet">
+            <div class="p-8 md:w-1/2 z-10">
+              <h3 class="text-3xl font-bold text-white font-serif-accent">GaLaBau</h3>
+              <p class="mt-2 text-gray-400">B2C/B2B – Emotion &amp; Bilder, die verkaufen.</p>
+              <span class="btn-outline mt-4 inline-block">GaLaBau ansehen</span>
+            </div>
+            <div class="md:w-1/2 h-48 md:h-full relative">
+              <img src="https://source.unsplash.com/800x400/?garden,design" alt="GaLaBau" class="w-full h-full object-cover" loading="lazy" />
+              <div class="industry-gradient"></div>
+              <div class="badge-floating">➜</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 px-4 bg-surface with-divider">
+      <div class="container mx-auto max-w-4xl">
+        <h2 class="section-title mb-8 text-center shiny-text">Vorgehen – in 3 Schritten</h2>
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <div class="p-6 bg-gray-100 rounded-xl">
+            <h3 class="font-semibold mb-2">Strategie-Gespräch</h3>
+            <p>Ziele, Zielgruppen, Prioritäten.</p>
           </div>
-          <div class="p-4 pt-0">
-            <div class="h-48 rounded-b-2xl overflow-hidden gradient-img">
-              <img src="https://source.unsplash.com/600x400/?brand,identity,design" alt="CI Design" class="w-full h-full object-cover" loading="lazy"/>
+          <div class="p-6 bg-gray-100 rounded-xl">
+            <h3 class="font-semibold mb-2">Design &amp; Entwicklung</h3>
+            <p>schnelle, klare UX, SEO-Basics.</p>
+          </div>
+          <div class="p-6 bg-gray-100 rounded-xl">
+            <h3 class="font-semibold mb-2">Launch &amp; Wachstum</h3>
+            <p>messen, ausbauen, skalieren.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-20 px-4 bg-gray-100 with-divider">
+      <div class="container mx-auto max-w-6xl">
+        <h2 class="section-title mb-8 text-center shiny-text">Social Proof &amp; Ergebnisse</h2>
+        <div class="grid md:grid-cols-2 gap-8 mb-10">
+          <div class="stat-card text-center">
+            <div class="stat-value">+142 %</div>
+            <div class="stat-label">Anfragen in 3 Monaten</div>
+          </div>
+          <div class="stat-card text-center">
+            <div class="stat-value">1,2 s</div>
+            <div class="stat-label">Ladezeit Core Pages</div>
+          </div>
+        </div>
+        <div class="testimonial-wrap text-center max-w-3xl mx-auto">
+          <p class="testimonial-quote mb-4">„Seit dem Relaunch bekommen wir spürbar mehr passende Anfragen – unkomplizierte Zusammenarbeit, klare Ergebnisse.“</p>
+          <div class="testimonial-meta justify-center">
+            <img src="https://source.unsplash.com/64x64/?portrait" alt="Kunde" class="avatar" />
+            <div>
+              <div class="font-semibold">[Name, Firma]</div>
             </div>
           </div>
-        </article>
-
-        <article class="service-grid-card basic-gradient neo-pop tilt p-0 reveal">
-          <div class="p-8 flex-grow flex flex-col">
-            <div class="flex justify-between items-start mb-4">
-              <h3 class="card-title">Entwicklung</h3>
-              <div class="arrow-circle dark">➜</div>
-            </div>
-            <p class="flex-grow font-light text-gray-900/90">Schnell, modern, SEO-klar – bereit für Wachstum.</p>
-          </div>
-          <div class="p-4 pt-0">
-            <div class="h-48 rounded-b-2xl overflow-hidden gradient-img--accent">
-              <img src="https://source.unsplash.com/600x400/?webdesign,code" alt="Webdesign" class="w-full h-full object-cover" loading="lazy"/>
-            </div>
-          </div>
-        </article>
-
-        <article class="service-grid-card basic-gradient neo-pop tilt p-0 reveal">
-          <div class="p-8 flex-grow flex flex-col">
-            <div class="flex justify-between items-start mb-4">
-              <h3 class="card-title">Automation</h3>
-              <div class="arrow-circle">➜</div>
-            </div>
-            <p class="text-gray-700 flex-grow font-light">Workflows & KI-Assistenten, die Zeit sparen.</p>
-          </div>
-          <div class="p-4 pt-0">
-            <div class="h-48 rounded-b-2xl overflow-hidden gradient-img">
-              <img src="https://source.unsplash.com/600x400/?automation,workflow" alt="Automation" class="w-full h-full object-cover" loading="lazy"/>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Branchen-Teaser -->
-      <div class="mt-8 space-y-8">
-        <a id="tiefbau" href="#contact" class="industry-banner tilt flex flex-col md:flex-row items-center reveal">
-          <div class="p-8 md:w-1/2 relative z-10">
-            <h3 class="text-3xl font-bold text-white font-serif-accent">Digitale Lösungen für den Tiefbau</h3>
-            <p class="mt-2 text-gray-400 font-light">Kompetenzen sichtbar machen. Ohne Schnickschnack.</p>
-          </div>
-          <div class="md:w-1/2 h-48 md:h-auto relative">
-            <img src="https://source.unsplash.com/800x400/?construction,site" alt="Tiefbau" class="w-full h-full object-cover" loading="lazy"/>
-            <div class="industry-gradient"></div>
-            <div class="badge-floating">➜</div>
-          </div>
-        </a>
-
-        <a id="galabau" href="#contact" class="industry-banner tilt flex flex-col md:flex-row items-center reveal">
-          <div class="p-8 md:w-1/2 relative z-10">
-            <h3 class="text-3xl font-bold text-white font-serif-accent">Premium-Websites für GaLaBau</h3>
-            <p class="mt-2 text-gray-400 font-light">Referenzen so zeigen, dass Premium-Anfragen entstehen.</p>
-          </div>
-          <div class="md:w-1/2 h-48 md:h-auto relative">
-            <img src="https://source.unsplash.com/800x400/?landscaping,garden" alt="GaLaBau" class="w-full h-full object-cover" loading="lazy"/>
-            <div class="industry-gradient"></div>
-            <div class="badge-floating">➜</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ABOUT ===== -->
-  <section id="about" class="with-divider py-20 px-4 bg-surface">
-    <div class="container mx-auto max-w-6xl">
-      <div class="max-w-2xl mb-10 reveal">
-        <span class="chip-light">Über mich</span>
-        <h2 class="section-title mb-3 shiny-text">Ich verbinde Handwerk & Digital.</h2>
-        <p class="text-gray-300 leading-relaxed">Ich bin Macher, kein Agenturmensch. Klare Websites, die verkaufen und Bewerbungen bringen.</p>
-      </div>
-
-      <div class="about-grid gap-6 mt-fixed-about">
-        <div class="rounded-3xl overflow-hidden about-card about-accent--blue reveal">
-          <img src="https://source.unsplash.com/800x520/?team" alt="Team" class="w-full h-full object-cover grayscale" />
-        </div>
-        <div class="rounded-3xl overflow-hidden about-card about-accent--orange about-uniform reveal">
-          <img src="https://source.unsplash.com/800x520/?construction-site" alt="On Site" class="w-full h-full object-cover grayscale" />
-        </div>
-        <div class="rounded-3xl overflow-hidden about-card about-accent--blue reveal">
-          <img src="https://source.unsplash.com/800x520/?workshop,planning" alt="Workshop" class="w-full h-full object-cover grayscale" />
-        </div>
-
-        <!-- Werte (integriert) -->
-        <div class="about-values col-span-3 reveal">
-          <div class="value-pill">Klarheit</div>
-          <div class="value-pill">Tempo</div>
-          <div class="value-pill">Ehrlichkeit</div>
-          <div class="value-pill">Ownership</div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== PROCESS (floating top-right CTA + buttons bottom-left) ===== -->
-  <section id="process" class="with-divider py-20 px-4 bg-gray-100">
-    <div class="container mx-auto max-w-6xl">
-      <div class="process-panel relative">
-        <!-- TOP-RIGHT CTA -->
-        <a href="#services" class="btn-floating magnet">Leistungen ansehen</a>
-
-        <div class="max-w-2xl mb-10 reveal">
-          <span class="section-tag">Mein Prozess</span>
-          <h2 class="section-title shiny-text">In 3 Schritten zur Kunden-Maschine</h2>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="step-card step-card--inset neo-pop reveal magnet">
-            <span class="step-emoji step-emoji--big">🧭</span>
-            <div class="step-index">1</div>
-            <h3 class="step-title">Strategie-Gespräch</h3>
-            <p class="step-text">Ziele & Zielgruppen klären – klare Positionierung.</p>
-          </div>
-          <div class="step-card step-card--inset neo-pop reveal magnet">
-            <span class="step-emoji step-emoji--big">🛠️</span>
-            <div class="step-index">2</div>
-            <h3 class="step-title">Design & Entwicklung</h3>
-            <p class="step-text">Klarer UX-Entwurf, schnelle Technik, SEO-Basics.</p>
-          </div>
-          <div class="step-card step-card--inset neo-pop reveal magnet">
-            <span class="step-emoji step-emoji--big">🚀</span>
-            <div class="step-index">3</div>
-            <h3 class="step-title">Launch & Wachstum</h3>
-            <p class="step-text">Messen, optimieren, Content erweitern.</p>
-          </div>
-        </div>
-
-        <!-- BOTTOM-LEFT BUTTONS -->
-        <div class="process-actions reveal">
-          <a href="#contact" class="btn-primary magnet">Kostenloses Erstgespräch</a>
-          <a href="#cases" class="btn-outline magnet">Beispiele ansehen</a>
-        </div>
+    </section>
+    <section class="py-20 px-4 bg-surface with-divider">
+      <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="section-title mb-4 shiny-text">Abschluss-CTA</h2>
+        <p class="mb-8">Lust, das Fundament zu legen? Kurzes Gespräch, klare Roadmap. Ich melde mich innerhalb von 24 h.</p>
+        <a href="kontakt.html" class="btn-primary magnet">Unverbindlich anfragen</a>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== PROOF (ersetzt das alte „Was du erwarten kannst“) ===== -->
-  <section id="proof" class="with-divider py-20 px-4 bg-surface">
-    <div class="container mx-auto max-w-6xl">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-10 reveal">
-        <div>
-          <span class="section-tag">Ergebnisse & Proof</span>
-          <h2 class="section-title shiny-text">Was meine Arbeit bewirkt</h2>
-          <p class="text-gray-300 mt-2 max-w-2xl">Messbare Resultate statt schöner Worte – ein Auszug aus Projekten.</p>
-        </div>
-        <a href="#contact" class="chip-dark magnet">Projekt starten</a>
-      </div>
-
-      <div class="grid md:grid-cols-4 gap-6">
-        <div class="stat-card neo-pop reveal">
-          <div class="stat-value">+142%</div>
-          <div class="stat-label">Mehr Web-Anfragen</div>
-          <div class="stat-sub">innerh. 3 Monate</div>
-        </div>
-        <div class="stat-card neo-pop reveal">
-          <div class="stat-value">-38%</div>
-          <div class="stat-label">Weniger Bounce</div>
-          <div class="stat-sub">durch klare UX</div>
-        </div>
-        <div class="stat-card neo-pop reveal">
-          <div class="stat-value">1,2s</div>
-          <div class="stat-label">Ladezeit</div>
-          <div class="stat-sub">auf Core Pages</div>
-        </div>
-        <div class="stat-card neo-pop reveal">
-          <div class="stat-value">#1-3</div>
-          <div class="stat-label">SEO-Rankings</div>
-          <div class="stat-sub">für Kernleistungen</div>
-        </div>
-      </div>
-
-      <div class="testimonial-wrap reveal">
-        <blockquote class="testimonial-quote">„Wir bekommen seit dem Relaunch endlich passende Anfragen – und die Seite lädt brutal schnell.“</blockquote>
-        <div class="testimonial-meta">
-          <img class="avatar" src="https://source.unsplash.com/64x64/?portrait,man" alt="Kunde" />
-          <div>
-            <div class="text-white font-semibold">Mario K., Tiefbau</div>
-            <div class="text-gray-400 text-sm">Geschäftsführer</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BLOG ===== -->
-  <section id="blog" class="with-divider py-20 px-4 bg-ultra">
-    <div class="container mx-auto max-w-6xl">
-      <div class="flex items-end justify-between mb-8 reveal">
-        <div>
-          <span class="section-tag">Insights</span>
-          <h2 class="section-title text-black shiny-text">Aus dem Blog</h2>
-          <p class="blog-intro">Kurz, praktisch – was heute im Handwerk online funktioniert.</p>
-        </div>
-        <a href="/blog" class="chip-dark magnet">Alle Artikel</a>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <article class="post-card post-card--light tilt reveal neo-pop">
-          <div class="post-media post-media--light">
-            <img src="https://source.unsplash.com/800x480/?seo,construction" alt="SEO im Tiefbau" loading="lazy"/>
-          </div>
-          <div class="post-content">
-            <h3 class="post-title post-title--light">SEO im Tiefbau</h3>
-            <p class="post-excerpt post-excerpt--light">Welche Begriffe wirklich Nachfrage haben – mit Beispielen und schnellen Checks.</p>
-            <a href="/blog" class="post-link magnet">Weiterlesen</a>
-          </div>
-        </article>
-
-        <article class="post-card post-card--light tilt reveal neo-pop">
-          <div class="post-media post-media--light">
-            <img src="https://source.unsplash.com/800x480/?landscaping,portfolio" alt="Portfolio GaLaBau" loading="lazy"/>
-          </div>
-          <div class="post-content">
-            <h3 class="post-title post-title--light">GaLaBau-Portfolio, das verkauft</h3>
-            <p class="post-excerpt post-excerpt--light">Vorher/Nachher, klarer Ablauf & CTAs – so entsteht Vertrauen.</p>
-            <a href="/blog" class="post-link magnet">Weiterlesen</a>
-          </div>
-        </article>
-
-        <article class="post-card post-card--light tilt reveal neo-pop">
-          <div class="post-media post-media--light">
-            <img src="https://source.unsplash.com/800x480/?career,website" alt="Karriere" loading="lazy"/>
-          </div>
-          <div class="post-content">
-            <h3 class="post-title post-title--light">Karriere-Seiten im Handwerk</h3>
-            <p class="post-excerpt post-excerpt--light">Das erwarten Bewerber – und so setzt du’s pragmatisch um.</p>
-            <a href="/blog" class="post-link magnet">Weiterlesen</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="with-divider py-20 px-4 bg-surface">
-    <div class="container mx-auto max-w-4xl text-center">
-      <h2 class="section-title mb-4 shiny-text">Bereit, das Fundament zu legen?</h2>
-      <p class="text-gray-300 mb-8">Kurzes Gespräch, klare Roadmap. Ich melde mich innerhalb von 24h.</p>
-      <form class="grid md:grid-cols-2 gap-4 text-left reveal">
-        <input class="input" type="text" placeholder="Name" required />
-        <input class="input" type="email" placeholder="E-Mail" required />
-        <input class="input md:col-span-2" type="text" placeholder="Unternehmen (optional)" />
-        <textarea class="input md:col-span-2" rows="5" placeholder="Worum geht's?"></textarea>
-        <button type="submit" class="btn-primary md:col-span-2 magnet">Unverbindlich anfragen</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
+    </section>
+  </main>
   <footer class="with-divider py-10 px-4 border-t border-white/10">
     <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="text-gray-400 text-sm">© <span id="year"></span> Briant Media – Web & KI</div>
       <div class="flex items-center gap-4 text-sm">
-        <a href="#" class="link">Impressum</a>
-        <a href="#" class="link">Datenschutz</a>
-        <a href="#contact" class="chip-dark magnet">Projekt starten</a>
+        <a href="impressum.html" class="link">Impressum</a>
+        <a href="datenschutz.html" class="link">Datenschutz</a>
+        <a href="kontakt.html" class="chip-dark magnet">Projekt starten</a>
       </div>
     </div>
   </footer>
-
-  <!-- Mobile Menu -->
   <div id="mobile-menu" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden opacity-0 z-50">
     <div class="absolute top-0 right-0 w-80 h-full bg-[#151515] shadow-2xl p-6 flex flex-col gap-4">
       <div class="flex items-center justify-between">
-        <a href="#" class="text-white text-2xl font-bold">b.</a>
+        <a href="index.html" class="text-white text-2xl font-bold">b.</a>
         <button id="close-menu-button" aria-label="Menü schließen" class="text-white text-xl leading-none">×</button>
       </div>
-      <a class="mobile-nav-link" href="#about">Über mich</a>
-      <a class="mobile-nav-link" href="#services">Leistungen</a>
-      <a class="mobile-nav-link" href="#blog">Blog</a>
-      <a class="mobile-nav-link" href="#contact">Kontakt</a>
-      <div class="mt-auto"><a href="#contact" class="btn-primary w-full text-center magnet">Projekt starten</a></div>
+      <a class="mobile-nav-link" href="ueber-mich.html">Über mich</a>
+      <a class="mobile-nav-link" href="leistungen.html">Leistungen</a>
+      <a class="mobile-nav-link" href="blog.html">Blog</a>
+      <a class="mobile-nav-link" href="kontakt.html">Kontakt</a>
+      <div class="mt-auto"><a href="kontakt.html" class="btn-primary w-full text-center magnet">Projekt starten</a></div>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
