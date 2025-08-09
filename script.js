@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
-  // ===== Scroll Reveal (IntersectionObserver) =====
+  // ===== Scroll Reveal =====
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('mouseleave', ()=> cursor.classList.remove('cursor-active'));
   });
 
-  // Magnet effect (leichtgewichtig)
+  // Magnet effect
   const magnets = document.querySelectorAll('.magnet');
   magnets.forEach(el => {
     const onMove = (e) => {
@@ -109,4 +109,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Before-After Slider
+  document.querySelectorAll('.before-after').forEach(container => {
+    const slider = container.querySelector('.slider');
+    const after = container.querySelector('.after-wrapper');
+    slider && slider.addEventListener('input', () => {
+      after.style.width = slider.value + '%';
+    });
+  });
+
+  // Blog Filter
+  const filterButtons = document.querySelectorAll('[data-filter]');
+  const posts = document.querySelectorAll('[data-category]');
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const f = btn.dataset.filter;
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      posts.forEach(p => {
+        p.classList.toggle('hidden', f !== 'all' && p.dataset.category !== f);
+      });
+    });
+  });
+
+  // FAQ Accordion
+  const faqs = document.querySelectorAll('details');
+  faqs.forEach(d => {
+    d.addEventListener('toggle', () => {
+      if (d.open) faqs.forEach(o => { if (o !== d) o.open = false; });
+    });
+  });
+
+  // Form Validation
+  document.querySelectorAll('form[data-validate]').forEach(form => {
+    form.addEventListener('submit', e => {
+      let valid = true;
+      form.querySelectorAll('[required]').forEach(field => {
+        const isEmail = field.type === 'email';
+        const ok = field.value.trim() && (!isEmail || /\S+@\S+\.\S+/.test(field.value));
+        field.classList.toggle('error', !ok);
+        if (!ok) valid = false;
+      });
+      if (!valid) e.preventDefault();
+    });
+  });
 });
